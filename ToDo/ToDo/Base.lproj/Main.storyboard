@@ -77,7 +77,14 @@
                             <outlet property="delegate" destination="RiE-DB-udC" id="IWb-mc-Sjh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Assignments" id="hnI-pk-ITC"/>
+                    <navigationItem key="navigationItem" title="Assignments" id="hnI-pk-ITC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AG0-MC-6cr">
+                            <color key="tintColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addButtonDidTouch:" destination="RiE-DB-udC" id="7D4-AY-xyY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ml-ee-zfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
