@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,6 +83,7 @@
                             <color key="tintColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addButtonDidTouch:" destination="RiE-DB-udC" id="7D4-AY-xyY"/>
+                                <segue destination="zkx-6p-BrE" kind="show" id="Ni4-FJ-aDd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -89,6 +91,142 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ml-ee-zfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="-9.4452773613193415"/>
+        </scene>
+        <!--New Assignment-->
+        <scene sceneID="QyK-Du-sV9">
+            <objects>
+                <viewController title="New Assignment" id="zkx-6p-BrE" customClass="AddAssignmnetViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ftJ-JZ-szj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vU7-Qu-XHw">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BaG-u2-dnD">
+                                <rect key="frame" x="16" y="58" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gYR-uJ-eBo">
+                                <rect key="frame" x="0.0" y="125" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="550266537.41846704">
+                                    <!--2018-06-09 19:48:57 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wJ-Nl-bke">
+                                <rect key="frame" x="16" y="96" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvv-Dw-Rhb">
+                                <rect key="frame" x="16" y="349" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7J-FJ-M4g">
+                                <rect key="frame" x="0.0" y="370" width="375" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dl5-s9-Dad">
+                                <rect key="frame" x="16" y="594" width="116" height="30"/>
+                                <state key="normal" title="ADD Assignment"/>
+                                <connections>
+                                    <action selector="addAssignmentButtonPressed:" destination="zkx-6p-BrE" eventType="touchUpInside" id="SoX-DS-w0b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Saf-Lz-t5r">
+                                <rect key="frame" x="66" y="349" width="293" height="30"/>
+                                <state key="normal" title="New Class"/>
+                                <connections>
+                                    <segue destination="GYr-bm-gwh" kind="show" id="HHi-Xj-CiQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q7J-FJ-M4g" firstAttribute="leading" secondItem="2GC-Kq-q7p" secondAttribute="leading" id="0Hg-Dh-kcE"/>
+                            <constraint firstItem="Dl5-s9-Dad" firstAttribute="leading" secondItem="2GC-Kq-q7p" secondAttribute="leading" constant="16" id="7wr-pO-2eA"/>
+                            <constraint firstItem="8wJ-Nl-bke" firstAttribute="leading" secondItem="2GC-Kq-q7p" secondAttribute="leading" constant="16" id="82d-Fa-vPA"/>
+                            <constraint firstItem="2GC-Kq-q7p" firstAttribute="trailing" secondItem="8wJ-Nl-bke" secondAttribute="trailing" constant="16" id="FK2-y6-Fq0"/>
+                            <constraint firstItem="gYR-uJ-eBo" firstAttribute="leading" secondItem="2GC-Kq-q7p" secondAttribute="leading" id="KVy-ZG-nvc"/>
+                            <constraint firstItem="Saf-Lz-t5r" firstAttribute="top" secondItem="gYR-uJ-eBo" secondAttribute="bottom" constant="8" id="Kff-hH-a22"/>
+                            <constraint firstItem="gYR-uJ-eBo" firstAttribute="top" secondItem="8wJ-Nl-bke" secondAttribute="bottom" constant="8" id="KqF-Tw-1Qr"/>
+                            <constraint firstItem="BaG-u2-dnD" firstAttribute="leading" secondItem="2GC-Kq-q7p" secondAttribute="leading" constant="16" id="OCo-3C-xpo"/>
+                            <constraint firstItem="Bvv-Dw-Rhb" firstAttribute="leading" secondItem="2GC-Kq-q7p" secondAttribute="leading" constant="16" id="Y5Y-Ld-JM9"/>
+                            <constraint firstItem="Dl5-s9-Dad" firstAttribute="top" secondItem="q7J-FJ-M4g" secondAttribute="bottom" constant="8" id="YwA-dH-TKa"/>
+                            <constraint firstItem="gYR-uJ-eBo" firstAttribute="trailing" secondItem="2GC-Kq-q7p" secondAttribute="trailing" id="ZRY-3n-gFV"/>
+                            <constraint firstItem="Bvv-Dw-Rhb" firstAttribute="top" secondItem="gYR-uJ-eBo" secondAttribute="bottom" constant="8" id="c53-Y3-z3c"/>
+                            <constraint firstItem="q7J-FJ-M4g" firstAttribute="top" secondItem="Bvv-Dw-Rhb" secondAttribute="bottom" id="iIC-xe-CbR"/>
+                            <constraint firstItem="Saf-Lz-t5r" firstAttribute="leading" secondItem="Bvv-Dw-Rhb" secondAttribute="trailing" constant="8" id="ics-CZ-McP"/>
+                            <constraint firstItem="BaG-u2-dnD" firstAttribute="top" secondItem="vU7-Qu-XHw" secondAttribute="bottom" constant="8" id="mBw-jF-nZB"/>
+                            <constraint firstItem="2GC-Kq-q7p" firstAttribute="trailing" secondItem="BaG-u2-dnD" secondAttribute="trailing" constant="16" id="nkV-EA-L7L"/>
+                            <constraint firstItem="8wJ-Nl-bke" firstAttribute="top" secondItem="BaG-u2-dnD" secondAttribute="bottom" constant="8" id="pRG-Xg-UgO"/>
+                            <constraint firstItem="2GC-Kq-q7p" firstAttribute="trailing" secondItem="Saf-Lz-t5r" secondAttribute="trailing" constant="16" id="rKG-16-6FW"/>
+                            <constraint firstItem="vU7-Qu-XHw" firstAttribute="top" secondItem="2GC-Kq-q7p" secondAttribute="top" id="rUJ-Pb-TLA"/>
+                            <constraint firstItem="vU7-Qu-XHw" firstAttribute="leading" secondItem="2GC-Kq-q7p" secondAttribute="leading" constant="16" id="vW8-K6-Pyh"/>
+                            <constraint firstItem="q7J-FJ-M4g" firstAttribute="trailing" secondItem="2GC-Kq-q7p" secondAttribute="trailing" id="xaw-LP-QEz"/>
+                            <constraint firstItem="2GC-Kq-q7p" firstAttribute="trailing" secondItem="vU7-Qu-XHw" secondAttribute="trailing" constant="16" id="zhk-LA-QY1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2GC-Kq-q7p"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="classPicker" destination="q7J-FJ-M4g" id="FeH-fa-2sp"/>
+                        <outlet property="descriptionTextField" destination="BaG-u2-dnD" id="BNx-78-Hro"/>
+                        <outlet property="dueDatePicker" destination="gYR-uJ-eBo" id="MdV-Wl-ECt"/>
+                        <outlet property="nameTextField" destination="vU7-Qu-XHw" id="4LS-QQ-c2S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0o-uc-dMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1277.5999999999999" y="-9.4452773613193415"/>
+        </scene>
+        <!--New Class View Controller-->
+        <scene sceneID="4bQ-VE-p63">
+            <objects>
+                <viewController id="GYr-bm-gwh" customClass="NewClassViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2LT-pp-1LD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DhN-vx-weV">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wws-Z7-MS7">
+                                <rect key="frame" x="16" y="58" width="73" height="30"/>
+                                <state key="normal" title="ADD Class"/>
+                                <connections>
+                                    <action selector="newClassButtonPressed:" destination="GYr-bm-gwh" eventType="touchUpInside" id="FVR-co-FsZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DhN-vx-weV" firstAttribute="top" secondItem="TFH-CV-Gos" secondAttribute="top" id="M2o-KM-uIa"/>
+                            <constraint firstItem="Wws-Z7-MS7" firstAttribute="leading" secondItem="TFH-CV-Gos" secondAttribute="leading" constant="16" id="dk2-gi-3DS"/>
+                            <constraint firstItem="DhN-vx-weV" firstAttribute="leading" secondItem="TFH-CV-Gos" secondAttribute="leading" constant="16" id="eBA-8u-oNN"/>
+                            <constraint firstItem="TFH-CV-Gos" firstAttribute="trailing" secondItem="DhN-vx-weV" secondAttribute="trailing" constant="16" id="kN9-Ao-qFR"/>
+                            <constraint firstItem="Wws-Z7-MS7" firstAttribute="top" secondItem="DhN-vx-weV" secondAttribute="bottom" constant="8" id="yQt-x2-7df"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TFH-CV-Gos"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="className" destination="DhN-vx-weV" id="JLf-9C-v1l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wD7-8D-5xb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2105" y="-9"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jyc-3F-Fb4">

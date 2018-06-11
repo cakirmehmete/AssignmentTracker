@@ -26,6 +26,9 @@ class AssignmentViewController: UITableViewController {
                     self.assignments.append(assignment)
                 }
             }
+            self.assignments = self.assignments.sorted(by: {
+                $0.dueDate.compare($1.dueDate) == .orderedDescending
+            })
             self.tableView.reloadData()
         })
     }
@@ -98,4 +101,3 @@ class AssignmentViewController: UITableViewController {
         
     }
 }
-

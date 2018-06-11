@@ -16,6 +16,8 @@
 		C3187C0520CA3FB2009502CC /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3187C0420CA3FB2009502CC /* AssignmentCell.swift */; };
 		C3187C0720CA4728009502CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3187C0620CA4728009502CC /* Constants.swift */; };
 		C3A61C2120CBB268004BAAB5 /* dataReciever.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A61C2020CBB268004BAAB5 /* dataReciever.swift */; };
+		C3A61C2320CC69C6004BAAB5 /* AddAssignmnetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A61C2220CC69C6004BAAB5 /* AddAssignmnetViewController.swift */; };
+		C3A61C2520CC6BE1004BAAB5 /* NewClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A61C2420CC6BE1004BAAB5 /* NewClassViewController.swift */; };
 		C3B3342020C65AA600A8F30C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B3341F20C65AA600A8F30C /* AppDelegate.swift */; };
 		C3B3342220C65AA600A8F30C /* AssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B3342120C65AA600A8F30C /* AssignmentViewController.swift */; };
 		C3B3342520C65AA600A8F30C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B3342320C65AA600A8F30C /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		C3187C0420CA3FB2009502CC /* AssignmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
 		C3187C0620CA4728009502CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C3A61C2020CBB268004BAAB5 /* dataReciever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataReciever.swift; sourceTree = "<group>"; };
+		C3A61C2220CC69C6004BAAB5 /* AddAssignmnetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignmnetViewController.swift; sourceTree = "<group>"; };
+		C3A61C2420CC6BE1004BAAB5 /* NewClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClassViewController.swift; sourceTree = "<group>"; };
 		C3B3341C20C65AA600A8F30C /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B3341F20C65AA600A8F30C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B3342120C65AA600A8F30C /* AssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 			children = (
 				C3B3342120C65AA600A8F30C /* AssignmentViewController.swift */,
 				C3187C0420CA3FB2009502CC /* AssignmentCell.swift */,
+				C3A61C2220CC69C6004BAAB5 /* AddAssignmnetViewController.swift */,
+				C3A61C2420CC6BE1004BAAB5 /* NewClassViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -243,7 +249,9 @@
 				C3187BFF20CA0387009502CC /* Assignment.swift in Sources */,
 				C3187C0520CA3FB2009502CC /* AssignmentCell.swift in Sources */,
 				C3B3342220C65AA600A8F30C /* AssignmentViewController.swift in Sources */,
+				C3A61C2520CC6BE1004BAAB5 /* NewClassViewController.swift in Sources */,
 				C3A61C2120CBB268004BAAB5 /* dataReciever.swift in Sources */,
+				C3A61C2320CC69C6004BAAB5 /* AddAssignmnetViewController.swift in Sources */,
 				C3187C0720CA4728009502CC /* Constants.swift in Sources */,
 				C3187C0320CA04A3009502CC /* User.swift in Sources */,
 				C3B3342020C65AA600A8F30C /* AppDelegate.swift in Sources */,

@@ -19,6 +19,7 @@ struct Constants {
         static let lightGreen = UIColor(hexString: "90CD53")
         static let yellow = UIColor(hexString: "F8E71C")
         static let brown = UIColor(hexString: "8B572A")
+        static let colorsArr = [Colors.green, Colors.blue, Colors.red, Colors.teal, Colors.orange, Colors.lightGreen, Colors.yellow, Colors.brown]
     }
 }
 

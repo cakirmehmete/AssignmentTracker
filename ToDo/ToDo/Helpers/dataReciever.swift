@@ -27,4 +27,19 @@ final class dataReciever {
         let classSchoolRef = ref.child(String(classSchool.id))
         classSchoolRef.setValue(classSchool.toAnyObject())
     }
+    
+    static func randomId() -> String {
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< 16 {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
+    }
 }
